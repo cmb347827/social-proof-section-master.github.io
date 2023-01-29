@@ -1,0 +1,175 @@
+$container__form-xs: 375;
+$container__form-sm: 576;
+$container__form-md: 768;
+$container__form-lg: 992;
+$container__form-xl: 1200;
+$container__form-xxl: 1440;
+
+$font-size: 15px;
+$class-name: 'attribution-a';
+
+$colors : (Very Dark Magenta:  hsl(300, 43%, 22%),Soft Pink: hsl(333, 100%, 96%),Dark Grayish Magenta: hsl(303, 10%, 53%),Light Grayish Magenta: hsl(300, 24%, 96%),White: hsl(0, 0%, 100%),Soft Dark Pink: hsl(333, 80%, 67%));
+$fallback-colors: (DarkSlateBlue PapayaWhip Thistle Lavender Snow HotPink);
+
+@mixin bg-color($color,$fallback-color){
+    background-color: $fallback-color;
+    background-color: $color;
+}
+@mixin font-color($color,$fallback-color){
+    color: $fallback-color;
+	color: $color;
+}
+@mixin width($grid-size){
+    width: $grid-size * 1px;
+}
+@mixin articleWidth($grid-size){
+    width: ($grid-size/3) - 65 * 1px;
+}
+
+@mixin border-radius($radius){
+    border-radius: $radius;
+}
+@mixin margin($args...){
+    margin: $args;
+}
+@mixin padding($args...){
+    padding: $args;
+}
+@mixin font-weight($weight){
+    font-weight: $weight;
+}
+
+*,::before,::after{
+	box-sizing:border-box;
+}
+html, body{
+	width: 100vw;
+	height: 100vh;
+	overflow: auto;
+	font: 400 "League Spartan",sans-serif;
+	@include bg-color(map-get($colors, White), nth($fallback-colors, 5));
+	background: url(https://raw.githubusercontent.com/cmb347827/social-proof-section-master.github.io/main/bg-pattern-top-mobile.svg) no-repeat fixed, url(https://raw.githubusercontent.com/cmb347827/social-proof-section-master.github.io/main/bg-pattern-bottom-mobile.svg) (30% 5%)/100% no-repeat fixed;
+	
+	@media screen and (min-width: $container__form-lg * 1px){ 
+	   background: url(https://raw.githubusercontent.com/cmb347827/social-proof-section-master.github.io/main/bg-pattern-top-desktop.svg) no-repeat fixed, url(https://raw.githubusercontent.com/cmb347827/social-proof-section-master.github.io/main/bg-pattern-bottom-desktop.svg) 5%/230% no-repeat fixed;
+	}
+	
+}
+
+h1{
+    @include font-color(map-get($colors, Very Dark Magenta), nth($fallback-colors, 1));
+	@include font-weight(700);
+}
+
+main{
+	overflow: auto;
+	width: 100%;
+	@include margin(100px auto);
+	@include padding(15px);
+	
+	.style{
+	  height: 9vh;
+	  div{
+	     @include bg-color(map-get($colors, Soft Pink), nth($fallback-colors, 2));
+		 @include padding(12px);
+		 @include border-radius(9px);
+	  }
+	}
+	.container{
+	    overflow: auto;
+	}
+	.container .container{
+		@include margin(15px 0);
+		span{
+		    @include font-color(map-get($colors, Very Dark Magenta), nth($fallback-colors, 1));
+		}
+	}
+	.container:not(.container .container){
+	    @include width($container__form-xs);
+	}
+	.container:nth-of-type(2):not(.container .container) article{
+        @include bg-color(map-get($colors, Very Dark Magenta), nth($fallback-colors, 1));
+		@include font-color(map-get($colors, White), nth($fallback-colors, 5));
+		@include margin(5px 0);
+		@include border-radius(5px);
+		@include border-radius(9px);
+	}
+	
+	p:not(.not article p){
+	    @include font-color(map-get($colors, Dark Grayish Magenta), nth($fallback-colors, 3));
+		@include font-weight(600);
+	}
+	.height{ 
+	    height: 280px;
+		@include margin(0 0 25px 0);
+		article{
+		    @include padding(15px);
+		}
+		img{
+		    @include border-radius(50%);
+		}
+	}
+	.d-flex em{
+	    @include font-color(map-get($colors, Soft Dark Pink), nth($fallback-colors, 6));
+	}
+	.attribution {
+		&-p{
+		    font-size: 11px;
+			text-align: center;
+		}
+		a.#{$class-name}{
+		    @include font-color(map-get($colors, Very Dark Magenta), nth($fallback-colors, 1));
+			display: inline-block;
+			@include margin(25px auto);
+		}
+    }
+	
+    @media screen and (min-width: $container__form-sm * 1px){ 
+	    .container:not(.container .container){
+	        @include width($container__form-sm);
+		}
+		.container:nth-of-type(2):not(.container .container) article{
+		    @include margin(10px 0);
+        }
+    }
+  
+	@media screen and (min-width: $container__form-md * 1px){ 
+	    .container:not(.container .container){
+	        @include width($container__form-md);
+		}
+		.container:nth-of-type(2):not(.container .container) article{
+		    @include margin(15px 0);
+        }
+    }
+	@media screen and (min-width: $container__form-lg * 1px){ 
+	    .container:not(.container .container){
+	        @include width($container__form-lg);
+		}
+		.container:nth-of-type(2):not(.container .container) article{
+		    @include articleWidth($container__form-lg);
+        }
+    }
+	@media screen and (min-width: $container__form-xl * 1px){ 
+	    h5{
+		    font: 500 "League Spartan",sans-serif;
+		}
+	    .container:not(.container .container){
+	        @include width($container__form-xl);
+		}
+		.container:nth-of-type(2):not(.container .container) article{
+			@include articleWidth($container__form-xl);
+        }
+    }
+	@media screen and (min-width: $container__form-xxl * 1px){ 
+	    h5{
+		    font: 700 "League Spartan",sans-serif;
+		}
+	    .container:not(.container .container){
+	        @include width($container__form-xxl);
+		}
+		.container:nth-of-type(2):not(.container .container) article{
+			@include articleWidth($container__form-xxl);
+        }
+    }
+	
+}

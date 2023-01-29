@@ -1,0 +1,102 @@
+*, ::before, ::after {
+  box-sizing: border-box; }
+
+html, body {
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  font: 400 "League Spartan",sans-serif;
+  background-color: Snow;
+  background-color: white;
+  background: url(https://raw.githubusercontent.com/cmb347827/social-proof-section-master.github.io/main/bg-pattern-top-mobile.svg) no-repeat fixed, url(https://raw.githubusercontent.com/cmb347827/social-proof-section-master.github.io/main/bg-pattern-bottom-mobile.svg) 30% 5%/100% no-repeat fixed; }
+  @media screen and (min-width: 992px) {
+    html, body {
+      background: url(https://raw.githubusercontent.com/cmb347827/social-proof-section-master.github.io/main/bg-pattern-top-desktop.svg) no-repeat fixed, url(https://raw.githubusercontent.com/cmb347827/social-proof-section-master.github.io/main/bg-pattern-bottom-desktop.svg) 5%/230% no-repeat fixed; } }
+
+h1 {
+  color: DarkSlateBlue;
+  color: #502050;
+  font-weight: 700; }
+
+main {
+  overflow: auto;
+  width: 100%;
+  margin: 100px auto;
+  padding: 15px; }
+  main .style {
+    height: 9vh; }
+    main .style div {
+      background-color: PapayaWhip;
+      background-color: #ffebf4;
+      padding: 12px;
+      border-radius: 9px; }
+  main .container {
+    overflow: auto; }
+  main .container .container {
+    margin: 15px 0; }
+    main .container .container span {
+      color: DarkSlateBlue;
+      color: #502050; }
+  main .container:not(.container .container) {
+    width: 375px; }
+  main .container:nth-of-type(2):not(.container .container) article {
+    background-color: DarkSlateBlue;
+    background-color: #502050;
+    color: Snow;
+    color: white;
+    margin: 5px 0;
+    border-radius: 5px;
+    border-radius: 9px; }
+  main p:not(.not article p) {
+    color: Thistle;
+    color: #937b92;
+    font-weight: 600; }
+  main .height {
+    height: 280px;
+    margin: 0 0 25px 0; }
+    main .height article {
+      padding: 15px; }
+    main .height img {
+      border-radius: 50%; }
+  main .d-flex em {
+    color: HotPink;
+    color: #ee68a4; }
+  main .attribution-p {
+    font-size: 11px;
+    text-align: center; }
+  main .attribution a.attribution-a {
+    color: DarkSlateBlue;
+    color: #502050;
+    display: inline-block;
+    margin: 25px auto; }
+  @media screen and (min-width: 576px) {
+    main .container:not(.container .container) {
+      width: 576px; }
+    main .container:nth-of-type(2):not(.container .container) article {
+      margin: 10px 0; } }
+  @media screen and (min-width: 768px) {
+    main .container:not(.container .container) {
+      width: 768px; }
+    main .container:nth-of-type(2):not(.container .container) article {
+      margin: 15px 0; } }
+  @media screen and (min-width: 992px) {
+    main .container:not(.container .container) {
+      width: 992px; }
+    main .container:nth-of-type(2):not(.container .container) article {
+      width: 265.6666666667px; } }
+  @media screen and (min-width: 1200px) {
+    main h5 {
+      font: 500 "League Spartan",sans-serif; }
+    main .container:not(.container .container) {
+      width: 1200px; }
+    main .container:nth-of-type(2):not(.container .container) article {
+      width: 335px; } }
+  @media screen and (min-width: 1440px) {
+    main h5 {
+      font: 700 "League Spartan",sans-serif; }
+    main .container:not(.container .container) {
+      width: 1440px; }
+    main .container:nth-of-type(2):not(.container .container) article {
+      width: 415px; } }
+
+/*# sourceMappingURL=social-proof-section-master.css.map */
