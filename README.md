@@ -34,8 +34,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Codementor repository](https://github.com/cmb347827/social-proof-section-master.github.io)
+- Live Site URL: [live site URL](https://cmb347827.github.io/social-proof-section-master.github.io/)
 
 ## My process
 
